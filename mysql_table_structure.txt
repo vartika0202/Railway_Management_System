@@ -1,0 +1,75 @@
+mysql> use railway;
+Database changed
+mysql> show tables;
++-------------------+
+| Tables_in_railway |
++-------------------+
+| creditcard        |
+| debitcard         |
+| l                 |
+| loginnn           |
+| plan              |
+| testreg           |
+| testreg1          |
+| testreg2          |
+| trainupdate       |
+| userregister      |
++-------------------+
+10 rows in set (0.00 sec)
+
+mysql> select * from creditcard;
++------------+---------+-------+-------------+
+| CardNumber | CardPin | CvvNo | EnterAmount |
++------------+---------+-------+-------------+
+|     345678 |    8765 |  3456 |         876 |
++------------+---------+-------+-------------+
+1 row in set (0.00 sec)
+
+mysql> select * from debitcard;
++------------+---------+-------+-------------+
+| CardNumber | CardPin | CvvNo | EnterAmount |
++------------+---------+-------+-------------+
+|      23456 |    3456 |  3456 |        4567 |
+|        456 |     456 |   123 |         345 |
++------------+---------+-------+-------------+
+2 rows in set (0.06 sec)
+
+mysql> select * from trainupdate;
++----------+---------+-----------+---------+--------------+------------+------+
+| Name     | TrainNo | StartTime | EndTime | StartStation | EndStation | Fare |
++----------+---------+-----------+---------+--------------+------------+------+
+| Rajdhani |     123 | 9 am      | 12 pm   | Merut        | Delhi      | 2000 |
++----------+---------+-----------+---------+--------------+------------+------+
+1 row in set (0.10 sec)
+
+mysql> select * from testreg1;
++---------+----------+----------------+----------+---------+---------+------+--------+----------+----------+-----------------+
+| Name    | LastName | Email          | PhoneNo  | Address | AdharNo | DOB  | Gender | UserName | Password | ConfirmPassword |
++---------+----------+----------------+----------+---------+---------+------+--------+----------+----------+-----------------+
+| j       | j        | u              |        7 | j       |       8 | NULL | NULL   | NULL     | NULL     | NULL            |
+| vartika | tyagi    | ghgh@gmail.com | 98765432 | jhghhd2 |   65432 | NULL | NULL   | vartika  | NULL     | NULL            |
+| vfg     | gfg      | dgfh           |       45 | dfgh    |   45678 | NULL | NULL   | cvh      | NULL     | NULL            |
+| NULL    | NULL     | NULL           |     NULL | NULL    |    NULL | NULL | Female | fgh      | fghj     | NULL            |
++---------+----------+----------------+----------+---------+---------+------+--------+----------+----------+-----------------+
+4 rows in set (0.05 sec)
+
+mysql> select * from plan;
++----------+-------+-------------+-----------+------+------+------+------------+
+| UserName | PNRno | FronStation | ToStation | dd   | mm   | yy   | TicketType |
++----------+-------+-------------+-----------+------+------+------+------------+
+| vartika  |    20 | saharanpur  | delhi     |   22 |    7 | 2018 | E-Ticket   |
++----------+-------+-------------+-----------+------+------+------+------------+
+1 row in set (0.04 sec)
+
+mysql> select * from l;
++----------+----------+-------+------+--------+
+| UserName | Password | PNRno | dd   | Gender |
++----------+----------+-------+------+--------+
+| vartika  | tyagi    |  NULL | NULL | NULL   |
+| dhruv    | tyagi    |  NULL | NULL | NULL   |
+| h        | a        |  NULL | NULL | NULL   |
+|          |          |  NULL | NULL | NULL   |
+| sdf      | wedr     |     1 | NULL | NULL   |
+| SDF      | SD       |  NULL | NULL | Female |
++----------+----------+-------+------+--------+
+6 rows in set (0.00 sec)
